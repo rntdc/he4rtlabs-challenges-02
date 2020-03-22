@@ -1,23 +1,44 @@
-.footer{
-    position: fixed;
-    width: 100%;
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#footer{
+    position: absolute;
     left: 0;
     bottom: 0;
+    width: 100%;
+    margin-top: 40px;
 }
 
-.footer a {
+@media only screen and (max-width: 767px) {
+    #footer {
+       position: relative !important;
+    }
+  }
+
+#footer a {
     text-decoration: none;
     color: #8743cc;
     font-weight: bold;
 }
-.footer a:hover {
+#footer a:hover {
     text-decoration: none;
     color: #8743cc;
     font-weight: bold;
 }
 
-.footer img{
+#footer img{
     margin-bottom: 3px;
     margin-left: 10px;
     width: 25px;
+}
+
+#addDiv{
+    justify-content: center !important;
+    display: none;
+}
+
+#addDiv .card{
+    opacity: 1 !important;
 }
