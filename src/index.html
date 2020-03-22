@@ -1,17 +1,159 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>He4rtLabsChallenges</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body>
-    <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>He4rtLabsChallenges</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+  <!--
         Link para nossa identidade visual
         https://imgur.com/a/WXy7lwN
     -->
-    <div>He4rtLabsChallenges #2</div>
-  </body>
-  <script src="assets/js/main.js"></script>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+
+  <div class="container">
+
+    <div class="row justify-content-center">
+      <div class="col-md-7 col-12">
+        <div class="card mt-5 pb-3">
+          <div class="card-body text-center">
+            <h6 class="card-title">Ações</h6>
+            <button type="button" class="btn btn-outline-primary">Inserir</button>
+            <button type="button" class="btn btn-outline-primary">Remover</button>
+            <button type="button" class="btn btn-outline-primary">Importar</button>
+            <button type="button" class="btn btn-outline-primary">Exportar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5 col-12">
+        <div class="card mt-5">
+          <div class="card-body text-center">
+            <div class="form-group">
+              <h6 class="card-title">Valor hora R$</h6>
+              <input type="number" class="form-control" id="in-valorHora">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-12">
+        <div class="card mt-5">
+          <div class="card-body text-center">
+            <h6 class="card-title">Funcionalidades Cadastradas</h6>
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Desenvolvimento</th>
+                  <th scope="col">Teste</th>
+                  <th scope="col">Valor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CRUD</td>
+                  <td>5h</td>
+                  <td>3h</td>
+                  <td>1000,00</td>
+                </tr>
+                <tr>
+                  <td>Registro</td>
+                  <td>2h</td>
+                  <td>1h</td>
+                  <td>200,00</td>
+                </tr>
+                <tr>
+                  <td>Newsletter</td>
+                  <td>4h</td>
+                  <td>2h</td>
+                  <td>800,00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-12">
+        <div class="card mt-5">
+          <div class="card-body text-center">
+            <h6 class="card-title">Final</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Funcionalidades: 3</li>
+              <li class="list-group-item">Desenvolvimento: 11h</li>
+              <li class="list-group-item">Teste: 6h</li>
+              <li class="list-group-item">Total R$: 2000,00</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title"><a href="https://labs.heartdevs.com">He4rtLabsChallenges</a></h5>
+          <p class="card-text">Challenge realizado por Renato     
+            <a href="https://github.com/rntdc"><img src="assets/img/git.png"> rntdc</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- fim container -->
+  </div>
+</body>
+
+<script src="assets/js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
 </html>
