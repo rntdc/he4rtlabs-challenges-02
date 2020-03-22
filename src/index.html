@@ -70,7 +70,7 @@
           <div class="card-body text-center">
             <div class="form-group">
               <h6 class="card-title">Valor hora R$</h6>
-              <input type="number" class="form-control" id="in-valorHora">
+              <input type="number" class="form-control" id="valorHora">
             </div>
           </div>
         </div>
@@ -132,24 +132,12 @@
                   <th scope="col">Valor</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="bodyTable">
                 <tr>
-                  <td>CRUD</td>
-                  <td>5h</td>
-                  <td>3h</td>
-                  <td>1000,00</td>
-                </tr>
-                <tr>
-                  <td>Registro</td>
+                  <td>Autenticação</td>
+                  <td>10h</td>
                   <td>2h</td>
-                  <td>1h</td>
-                  <td>200,00</td>
-                </tr>
-                <tr>
-                  <td>Newsletter</td>
-                  <td>4h</td>
-                  <td>2h</td>
-                  <td>800,00</td>
+                  <td>R$ 1000,00</td>
                 </tr>
               </tbody>
             </table>
@@ -162,9 +150,9 @@
             <h6 class="card-title">Final</h6>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Funcionalidades: 3</li>
-              <li class="list-group-item">Desenvolvimento: 11h</li>
-              <li class="list-group-item">Teste: 6h</li>
-              <li class="list-group-item">Total R$: 2000,00</li>
+              <li class="list-group-item">Desenvolvimento: <span id="totalDev"></span>h</li>
+              <li class="list-group-item">Teste: <span id="totalTest"></span>h</li>
+              <li class="list-group-item">Total R$: <span id="total"></span></li>
             </ul>
           </div>
         </div>
