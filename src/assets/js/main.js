@@ -58,7 +58,6 @@ const att = () => {
   });
 
   document.getElementById("func").innerHTML = func;
-
   document.getElementById("totalDev").innerHTML = features.reduce(
     (acc, feature) => (acc += feature.devHours),
     0
@@ -71,7 +70,7 @@ const att = () => {
     (acc, feature) =>
       (acc += calcFeature(feature.devHours, feature.testHours)),
     0
-  );
+  );  
 };
 
 const init = () => att();
@@ -81,7 +80,7 @@ document.getElementById("valorHora").addEventListener("keyup", () => {
   att();
 });
 
-// Adiciona valores do form na tabela
+// Adiciona valores do form na tabela quando btnAdd clicado
 document.getElementById("btnAdd").addEventListener("click", e => {
   e.preventDefault();
 
@@ -99,7 +98,19 @@ document.getElementById("btnAdd").addEventListener("click", e => {
   att();
 });
 
+// Remove valor marcado na tabela quando btnDel clicado
+document.getElementById("btnDel").addEventListener("click", e => {
+  e.preventDefault();
+  let trs = document.getElementsByClassName("table-active");
+  if (!trs.length) {
+    Swal.fire('Nenhuma linha selecionada')
+    return false;
+  }
+  let index = parseInt(trs[0].getAttribute("data-index"));
 
+  features = features.filter((data, i) => i !== index);
+  att();
+});
 
 // Exibição da div de form e solucao footer
 function addDiv(){
@@ -110,7 +121,7 @@ function addDiv(){
     footer.style.position = 'absolute';
   } else {
     div.style.display = 'flex';
-    footer.style.position = 'relative';
+    footer.style.position = 'relative'; 
   }
 }
 
