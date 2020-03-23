@@ -3,6 +3,9 @@
 const sr = ScrollReveal();
 sr.reveal('.card');
 
+let func = 0;
+let totalAmount = 0
+
 // Calcula valor total
 const calcFeature = (devHours, testHours) => {
   let valorHora = document.getElementById("valorHora").value;
@@ -22,6 +25,7 @@ const selecionar = event => {
 
 // Gera partes da tabela
 const geraTabela = (id, data) => {
+  func++;
   return `
     <tr onclick="selecionar(event)" data-index="${id}">
       <td>${data.feature}</td>
@@ -32,7 +36,7 @@ const geraTabela = (id, data) => {
   `;
 }
 
-let totalAmount = 0;
+
 let features = [
   {
     feature: "Authentication",
@@ -45,12 +49,15 @@ let features = [
 // Atualiza
 const att = () => {
   totalAmount = 0;
+  func = 0;
   let table = document.getElementById("bodyTable");
   table.innerHTML = "";
   features.forEach((feature, i) => {
     let tr = geraTabela(i, feature);
     table.insertAdjacentHTML("beforeend", tr);
   });
+
+  document.getElementById("func").innerHTML = func;
 
   document.getElementById("totalDev").innerHTML = features.reduce(
     (acc, feature) => (acc += feature.devHours),
